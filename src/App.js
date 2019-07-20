@@ -1,10 +1,11 @@
 import React from "react";
 import "./App.css";
+import Layout from "./components/Layout";
 
 function App() {
   return (
     <div className='App'>
-      <p>Chatu-Chatu</p>
+      <Layout />
     </div>
   );
 }
