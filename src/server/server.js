@@ -5,7 +5,7 @@ const server = require("http").Server(app);
 // This creates our socket using the instance of the server
 const io = (module.exports.io = require("socket.io")(server));
 
-let port = process.env.port || 3456;
+let PORT = process.env.PORT || 3456;
 
 // const SocketManager = require("./SockerManager.js");
 app.use(express.static(__dirname + "/../../build"));
@@ -24,6 +24,6 @@ io.on("connection", socket => {
   });
 });
 
-server.listen(port, () => {
-  console.log("server running on port: " + port);
+server.listen(PORT, () => {
+  console.log("server running on port: " + PORT);
 });
