@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 const server = require("http").Server(app);
 // This creates our socket using the instance of the server
-const io = (module.exports.io = require("socket.io")(app));
+const io = (module.exports.io = require("socket.io")(server));
 
 let port = process.env.port || 3456;
 
