@@ -3,7 +3,7 @@ import io from "socket.io-client";
 
 import ChatName from "./ChatName";
 import ChatRoom from "./ChatRoom";
-const socketURL = "http://localhost:3456";
+const socketURL = "/";
 
 class Chat extends React.Component {
   constructor(props) {
