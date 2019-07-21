@@ -1,17 +1,26 @@
 import React from "react";
-import MessageBoard from "../components/Chat/MessageBoard";
 import io from "socket.io-client";
+
+import ChatName from "./ChatName";
+import ChatRoom from "./ChatRoom";
 const socketURL = "http://localhost:3456";
-class Layout extends React.Component {
+
+class Chat extends React.Component {
   constructor(props) {
     super(props);
-
     this.state = {
+      name: null,
       socket: null
     };
   }
 
-  componentWillMount() {
+  handleSubmitName = name => {
+    this.setState({
+      name: name
+    });
+  };
+
+  componentDidMount() {
     this.initSocket();
   }
 
@@ -23,14 +32,16 @@ class Layout extends React.Component {
     });
     this.setState({ socket });
   };
-
   render() {
     return (
-      <div className='Layout'>
-        <h1>Welcome to Chatu-Chatu!</h1>
-        <MessageBoard />
+      <div>
+        {!this.state.name && (
+          <ChatName handleSubmitName={this.handleSubmitName} />
+        )}
+        {this.state.name && <ChatRoom name={this.state.name} />}
       </div>
     );
   }
 }
-export default Layout;
+
+export default Chat;
