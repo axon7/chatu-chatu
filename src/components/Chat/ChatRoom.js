@@ -1,7 +1,7 @@
 import React from "react";
 import io from "socket.io-client";
 import ChatTable from "./ChatTable";
-const socketURL = "http://localhost:3456";
+const socketURL = "/";
 const socket = io(socketURL);
 class ChatRoom extends React.Component {
   constructor(props) {
