@@ -1,8 +1,8 @@
 import React from "react";
-import io from "socket.io-client";
+// import io from "socket.io-client";
 import ChatTable from "./ChatTable";
-const socketURL = "/";
-const socket = io(socketURL);
+// const socketURL = "localhost:3456";
+// const socket = io(socketURL);
 class ChatRoom extends React.Component {
   constructor(props) {
     super(props);
@@ -13,7 +13,7 @@ class ChatRoom extends React.Component {
   }
 
   componentDidMount() {
-    socket.on("chat", message => {
+    this.props.socket.on("chat", message => {
       this.setState({
         allMsgs: [...this.state.allMsgs, message]
       });
@@ -22,21 +22,19 @@ class ChatRoom extends React.Component {
 
   handleMsgSubmit = e => {
     e.preventDefault();
-    console.log("handle msg submit " + this.state.newMsg);
-    socket.emit("chat", {
+    this.props.socket.emit("chat", {
       name: this.props.name,
       message: this.state.newMsg,
       timestamp: new Date().toISOString()
     });
 
     this.setState({ newMsg: "" });
-    console.log(this.state.allMsgs);
   };
 
   render() {
     return (
       <div>
-        <h1>chatroom hello {this.props.name}</h1>{" "}
+        <h1>Chatu-Chatu</h1> <p>Your name: {this.props.name}</p>
         <form onSubmit={this.handleMsgSubmit}>
           <input
             type='text'

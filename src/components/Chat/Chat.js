@@ -1,9 +1,17 @@
 import React from "react";
 import io from "socket.io-client";
+import styled from "styled-components";
 
 import ChatName from "./ChatName";
 import ChatRoom from "./ChatRoom";
 const socketURL = "/";
+
+const Wrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: grey;
+`;
 
 class Chat extends React.Component {
   constructor(props) {
@@ -34,12 +42,14 @@ class Chat extends React.Component {
   };
   render() {
     return (
-      <div>
+      <Wrapper>
         {!this.state.name && (
           <ChatName handleSubmitName={this.handleSubmitName} />
         )}
-        {this.state.name && <ChatRoom name={this.state.name} />}
-      </div>
+        {this.state.name && (
+          <ChatRoom name={this.state.name} socket={this.state.socket} />
+        )}
+      </Wrapper>
     );
   }
 }
