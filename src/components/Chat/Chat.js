@@ -4,14 +4,23 @@ import styled from "styled-components";
 
 import ChatName from "./ChatName";
 import ChatRoom from "./ChatRoom";
-const socketURL = "/";
+const socketURL = "localhost:3456";
 
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: white;
-  height: 90vh;
+  background-color: #2e2d2d;
+  height: 100vh;
+  color: white;
+`;
+const StyledH1 = styled.h1`
+  height: 10vh;
+
+  text-align: center;
+  position: fixed;
+  top: 40px;
+  left: auto;
 `;
 
 class Chat extends React.Component {
@@ -43,14 +52,18 @@ class Chat extends React.Component {
   };
   render() {
     return (
-      <Wrapper>
-        {!this.state.name && (
-          <ChatName handleSubmitName={this.handleSubmitName} />
-        )}
-        {this.state.name && (
-          <ChatRoom name={this.state.name} socket={this.state.socket} />
-        )}
-      </Wrapper>
+      <>
+        <Wrapper>
+          <StyledH1>Chatu-Chatu</StyledH1>
+
+          {!this.state.name && (
+            <ChatName handleSubmitName={this.handleSubmitName} />
+          )}
+          {this.state.name && (
+            <ChatRoom name={this.state.name} socket={this.state.socket} />
+          )}
+        </Wrapper>
+      </>
     );
   }
 }
