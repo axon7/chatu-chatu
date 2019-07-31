@@ -9,6 +9,7 @@ const StyledButton = styled.button`
   background-color: #088774;
   margin-right: 20px;
   margin-left: 4px;
+  color: white;
 `;
 export default function Button({ children }) {
   return <StyledButton type='submit'>{children}</StyledButton>;

@@ -21,19 +21,19 @@ const StyledChatRoom = styled.div`
 `;
 
 const InputForm = styled.form`
-  width: 100%;
+  width: 80%;
   height: 40px;
-  margin: 0px auto 3% auto;
+  margin: 0px auto 10px auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 `;
 
 const StyledInputField = styled.input`
   height: 100%;
-  width: 90%;
+  width: 80%;
   border: 0px solid;
   border-radius: 10px;
-  padding-left: 2%;
+  padding-left: 15px;
   margin-left: 20px;
   outline: 0px;
 

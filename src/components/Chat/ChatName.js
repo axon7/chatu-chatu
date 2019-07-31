@@ -5,12 +5,16 @@ const StyledChatName = styled.div`
   display: flex;
 
   background-color: #439bf84f;
-  height: 15vh;
+  height: 30%;
+  min-height: 180px;
+  max-height: 180px;
+  max-width: 610px;
   border-radius: 20px;
   width: 80vw;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  text-align: center;
 `;
 
 const InputForm = styled.form`
@@ -18,8 +22,9 @@ const InputForm = styled.form`
   height: 20%;
   margin: 10px auto auto auto;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
+  max-height: 35px;
 `;
 
 const StyledInputName = styled.input`
@@ -27,7 +32,7 @@ const StyledInputName = styled.input`
   width: 80%;
   border: 0px solid;
   border-radius: 10px;
-  padding: 2%;
+  padding-left: 2%;
   outline: 0px;
 
   :focus {
@@ -45,7 +50,7 @@ export default function ChatName(props) {
 
   return (
     <StyledChatName>
-      <h1>What's your name?</h1>
+      <h2>What's your name?</h2>
       <InputForm onSubmit={handleSubmit}>
         <StyledInputName
           type='text'

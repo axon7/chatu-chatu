@@ -13,13 +13,15 @@ const Wrapper = styled.div`
   background-color: #2e2d2d;
   height: 100vh;
   color: white;
+  flex-direction: column;
 `;
 const StyledH1 = styled.h1`
   height: 10vh;
-
   text-align: center;
+  width: 100%;
+  display: block;
   position: fixed;
-  top: 40px;
+  top: 5px;
   left: auto;
 `;
 
