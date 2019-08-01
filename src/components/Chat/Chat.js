@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 import ChatName from "./ChatName";
 import ChatRoom from "./ChatRoom";
-const socketURL = "/";
+const socketURL = "localhost:3456";
 
 const Wrapper = styled.div`
   display: flex;

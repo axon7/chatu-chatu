@@ -46,14 +46,16 @@ class ChatRoom extends React.Component {
     super(props);
     this.state = {
       allMsgs: [],
-      newMsg: ""
+      newMsg: "",
+      name: ""
     };
   }
 
   componentDidMount() {
     this.props.socket.on("chat", message => {
       this.setState({
-        allMsgs: [...this.state.allMsgs, message]
+        allMsgs: [...this.state.allMsgs, message],
+        name: this.props.name
       });
     });
   }
@@ -74,7 +76,7 @@ class ChatRoom extends React.Component {
       <StyledChatRoom>
         {/* <p>Your name: {this.props.name}</p> */}
 
-        <ChatTable messages={this.state.allMsgs} />
+        <ChatTable messages={this.state.allMsgs} name={this.props.name} />
         <InputForm onSubmit={this.handleMsgSubmit}>
           <StyledInputField
             type='text'
