@@ -75,6 +75,9 @@ const Bubble = styled.div`
 const BubbleBefore = styled.div`
   position: relative;
   background-color: white;
+  width: 100%;
+  height: auto;
+  overflow-wrap: break-word;
 
   :before {
     content: "";
