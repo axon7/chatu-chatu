@@ -7,6 +7,9 @@ const StyledChatTable = styled.div`
   height: 100%;
   display: flex;
   align-items: flex-end;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 0.8em;
 `;
 
 const StyledUl = styled.ul`
@@ -16,9 +19,9 @@ const StyledUl = styled.ul`
   max-height: 80%;
   display: flex;
   flex-direction: column;
-  padding: 0;
+  padding: 20px;
   width: 100%;
-  margin: 10px;
+  padding-left: 30px;
 `;
 
 const StyledMyMessage = styled.li`
@@ -29,12 +32,13 @@ const StyledMyMessage = styled.li`
   display: flex;
   width: fit-content;
   border-radius: 0.4em;
+  max-width: 70%;
   margin: 6px 10px 0 0;
   padding: 5px;
 `;
 
 const StyledSomeoneMessage = styled.li`
-  color: red;
+  color: black;
   background-color: white;
   /* margin-left: 70vmin; */
   display: flex;
@@ -72,14 +76,16 @@ const BubbleBefore = styled.div`
   :before {
     content: "";
     position: absolute;
-    right: 0;
+    /* z-index: 1; */
+    left: -33px;
     top: 50%;
     width: 0;
     height: 0;
     border: 1em solid transparent;
-    border-left-color: white;
-    border-right: 0;
+    border-right-color: white;
+    /* border-left: 0; */
     border-bottom: 0;
+    /* margin-left: -2em; */
     margin-top: -0.5em;
     margin-right: -1em;
   }
