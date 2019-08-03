@@ -12,10 +12,9 @@ const StyledChatRoom = styled.div`
   display: flex;
 
   background-color: #439bf84f;
-  height: 100%;
+  height: 70vh;
   border-radius: 20px;
   width: 80vw;
-  max-width: 900px;
   align-items: space-between;
   justify-content: center;
   flex-direction: column;
