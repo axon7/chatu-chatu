@@ -12,7 +12,7 @@ const StyledChatRoom = styled.div`
   display: flex;
 
   background-color: #439bf84f;
-  height: 70vh;
+  height: 100%;
   border-radius: 20px;
   width: 80vw;
   align-items: space-between;

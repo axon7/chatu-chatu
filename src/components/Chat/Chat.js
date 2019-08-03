@@ -4,14 +4,14 @@ import styled from "styled-components";
 
 import ChatName from "./ChatName";
 import ChatRoom from "./ChatRoom";
-const socketURL = "/";
+const socketURL = "localhost:3456";
 
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #2e2d2d;
-  height: 100%;
+  height: 90%;
   color: white;
   flex-direction: column;
 `;
