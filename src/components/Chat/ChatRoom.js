@@ -62,11 +62,15 @@ class ChatRoom extends React.Component {
 
   handleMsgSubmit = e => {
     e.preventDefault();
-    this.props.socket.emit("chat", {
-      name: this.props.name,
-      message: this.state.newMsg,
-      timestamp: new Date().toISOString()
-    });
+    if (this.state.newMsg !== "") {
+      this.props.socket.emit("chat", {
+        name: this.props.name,
+        message: this.state.newMsg,
+        timestamp: new Date().toISOString()
+      });
+    } else {
+      return null;
+    }
 
     this.setState({ newMsg: "" });
   };
