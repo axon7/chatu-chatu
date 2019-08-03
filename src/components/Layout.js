@@ -1,11 +1,11 @@
 import React from "react";
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
   body {
-    color: black;
-    background-color: grey;
-    height: 100vh;
+    color: white;
+    background-color: #2e2d2d;
+    
     margin: 0 auto;
     font-family: Helvetica, sans-serif;
 
@@ -16,13 +16,25 @@ const GlobalStyle = createGlobalStyle`
 
 `;
 
+const StyledH1 = styled.h1`
+  height: 25px;
+
+  text-align: center;
+  width: 100%;
+`;
+
+const StyledLayout = styled.div`
+  height: 89vh;
+`;
+
 const Layout = ({ children }) => {
   return (
-    <div className='Layout'>
-      <GlobalStyle whiteColor />
+    <StyledLayout>
+      <GlobalStyle />
+      <StyledH1>Chatu-Chatu</StyledH1>
 
       {children}
-    </div>
+    </StyledLayout>
   );
 };
 

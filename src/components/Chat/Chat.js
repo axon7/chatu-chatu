@@ -11,18 +11,9 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   background-color: #2e2d2d;
-  height: 100vh;
+  height: 100%;
   color: white;
   flex-direction: column;
-`;
-const StyledH1 = styled.h1`
-  height: 10vh;
-  text-align: center;
-  width: 100%;
-  display: block;
-  position: fixed;
-  top: 5px;
-  left: auto;
 `;
 
 class Chat extends React.Component {
@@ -56,8 +47,6 @@ class Chat extends React.Component {
     return (
       <>
         <Wrapper>
-          <StyledH1>Chatu-Chatu</StyledH1>
-
           {!this.state.name && (
             <ChatName handleSubmitName={this.handleSubmitName} />
           )}
