@@ -87,7 +87,7 @@ const BubbleBefore = styled.div`
     border-bottom: 0;
     /* margin-left: -2em; */
     margin-top: -0.5em;
-    margin-right: -1em;
+    margin-left: 0.5em;
   }
 `;
 export default function ChatTable(props) {
