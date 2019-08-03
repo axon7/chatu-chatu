@@ -52,6 +52,9 @@ const StyledSomeoneMessage = styled.li`
 const Bubble = styled.div`
   position: relative;
   background-color: white;
+  width: 100%;
+  height: auto;
+  overflow-wrap: break-word;
 
   :after {
     content: "";
