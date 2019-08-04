@@ -8,6 +8,10 @@ Real-time global chat
 * [React](https://reactjs.org/) - https://reactjs.org/
 * [StyledComponents](https://www.styled-components.com/) - Utilising tagged template literals and the power of CSS styled-components allows you to write actual CSS code to style your components
 
+## Live demo
+
+https://chatu-chatu.herokuapp.com/
+
 ## Available Scripts
 
 In the project directory, you can run:
